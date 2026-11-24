@@ -254,6 +254,10 @@ footer .furl { color:var(--cyan); font-weight:500; }
 /* === REQUIRED STAR === */
 .req { color:var(--cyan); margin-left:2px; }
 
+/* === STUDENT RATES === */
+.svc-was { font-size:.8rem; color:var(--dimmer); text-decoration:line-through; margin-bottom:2px; }
+.stu-fine { margin-top:28px; font-size:.85rem; color:var(--muted); text-align:center; max-width:680px; margin-left:auto; margin-right:auto; line-height:1.7; }
+
 /* === RESPONSIVE === */
 @media(max-width:960px){
   .why-grid { grid-template-columns:repeat(2,1fr); }
@@ -311,6 +315,11 @@ footer .furl { color:var(--cyan); font-weight:500; }
             <label>Service Needed <span class="req">*</span></label>
             <select id="f-service" required>
               <option value="" disabled selected>Select a service…</option>
+              <option value="Student Laptop Rescue">Student — Laptop Rescue (R220)</option>
+              <option value="Student Assignment Rescue">Student — Assignment Rescue (R420)</option>
+              <option value="Student Study Session">Student — Study Session (R99 first hour)</option>
+              <option value="Student Campus Drop Day">Student — Campus Drop Day</option>
+              <option value="Student card discount">Student — 15% off other work</option>
               <option value="Data Recovery">Data Recovery</option>
               <option value="Computer Repair">Computer Repair</option>
               <option value="Remote Support">Remote Support</option>
@@ -400,6 +409,7 @@ footer .furl { color:var(--cyan); font-weight:500; }
   <ul class="nav-links">
     <li><a href="#why">Why Us</a></li>
     <li><a href="#services">Services</a></li>
+    <li><a href="#students">Students</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
   <button class="nav-cta book-trigger">Book Now</button>
@@ -414,6 +424,7 @@ footer .furl { color:var(--cyan); font-weight:500; }
     <p>Over 13 years of experience providing enterprise-grade IT support, server management, and hardware solutions to businesses and individuals.</p>
     <div class="hero-btns">
       <button class="btn btn-filled book-trigger">Book Appointment</button>
+      <a href="#students" class="btn btn-outline">Student rates</a>
       <a href="#contact" class="btn btn-outline">Contact Us</a>
     </div>
   </div>
@@ -579,6 +590,96 @@ footer .furl { color:var(--cyan); font-weight:500; }
         <div class="svc-note">Tailored to your business</div>
       </div>
 
+    </div>
+  </div>
+</section>
+
+
+<!-- ── STUDENT RATES ── -->
+<section id="students" class="section section--alt">
+  <div class="wrap">
+    <div class="sh">
+      <h2>Student Rates</h2>
+      <p>Bloemfontein campuses, colleges, TVET and schools. Show a valid student or school card.</p>
+    </div>
+    <div class="svc-grid">
+
+      <div class="svc-card">
+        <div class="sc-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="3" width="20" height="14" rx="2"/>
+            <line x1="8" y1="21" x2="16" y2="21"/>
+            <line x1="12" y1="17" x2="12" y2="21"/>
+          </svg>
+        </div>
+        <h3>Laptop Rescue</h3>
+        <p>Same-day diagnostics, virus removal, a slow laptop and software fixes. Parts are quoted first.</p>
+        <div class="svc-was">R300</div>
+        <div class="svc-price">R220</div>
+        <div class="svc-note">Same day diagnostics</div>
+      </div>
+
+      <div class="svc-card">
+        <div class="sc-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="7" width="20" height="10" rx="3"/>
+            <line x1="6" y1="12" x2="6.01" y2="12"/>
+            <line x1="10" y1="12" x2="14" y2="12"/>
+          </svg>
+        </div>
+        <h3>Assignment Rescue</h3>
+        <p>Files off a failed drive, a corrupted laptop, or an accidental delete.</p>
+        <div class="svc-was">R550</div>
+        <div class="svc-price">R420</div>
+        <div class="svc-note">No recovery = No pay</div>
+      </div>
+
+      <div class="svc-card">
+        <div class="sc-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/>
+          </svg>
+        </div>
+        <h3>Study Session</h3>
+        <p>Remote help with Office, Wi-Fi, submissions and crashes. Stay where you are.</p>
+        <div class="svc-was">R150 per hour</div>
+        <div class="svc-price">R99 first hour</div>
+        <div class="svc-note">Then R120 per hour</div>
+      </div>
+
+      <div class="svc-card">
+        <div class="sc-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/>
+            <circle cx="12" cy="10" r="3"/>
+          </svg>
+        </div>
+        <h3>Campus Drop Day</h3>
+        <p>One visit to a residence or campus. Labour is at the student rate.</p>
+        <div class="svc-was">R450 call-out fee</div>
+        <div class="svc-price">No call-out</div>
+        <div class="svc-note">When 4 devices book together</div>
+      </div>
+
+      <div class="svc-card">
+        <div class="sc-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+            <circle cx="12" cy="7" r="4"/>
+          </svg>
+        </div>
+        <h3>Student Card</h3>
+        <p>15% off any other job on the public price list. Managed IT and custom quotes stay custom.</p>
+        <div class="svc-was">List price</div>
+        <div class="svc-price">15% off</div>
+        <div class="svc-note">Valid student or school card</div>
+      </div>
+
+    </div>
+    <p class="stu-fine">UFS, CUT, Motheo TVET (Bloemfontein and Hillside View), private colleges and school learners. Botshabelo and Thaba Nchu when a group books. Parts, licences and replacement drives are extra. A drop day needs four confirmed devices at one address before we travel.</p>
+    <div class="ct-btns" style="margin-top:28px">
+      <button class="btn btn-filled book-trigger">Book a student rate</button>
+      <a href="https://wa.me/27711073723?text=Hi%20Swift%20IT.%20I%20am%20a%20student%20in%20Bloemfontein.%20I%20want%20the%20student%20rate.%20My%20campus%20is%20" target="_blank" rel="noopener" class="btn btn-green">WhatsApp a student booking</a>
     </div>
   </div>
 </section>
