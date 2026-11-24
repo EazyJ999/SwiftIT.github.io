@@ -267,6 +267,42 @@ footer .furl { color:var(--cyan); font-weight:500; }
 .part-card h3 { font-size:1.05rem; font-weight:700; padding:14px 16px 2px; color:#142033; }
 .part-card p { font-size:.84rem; color:#4e6285; padding:0 16px 16px; line-height:1.5; }
 
+
+.fit-wide, .fit-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 22px;
+}
+.fit-wide {
+  display: grid;
+  grid-template-columns: 1.5fr 200px;
+  gap: 18px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.fit-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.fit-card {
+  display: grid;
+  grid-template-columns: 1fr 150px;
+  gap: 14px;
+  align-items: center;
+}
+.fit-wide h3, .fit-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 8px; }
+.fit-wide p, .fit-card p { font-size: .855rem; color: var(--muted); line-height: 1.6; }
+.fit-wide img, .fit-card img {
+  width: 100%;
+  height: 120px;
+  object-fit: contain;
+  background: #fff;
+  border-radius: 10px;
+  display: block;
+}
+.fit-wide img { height: 140px; object-fit: cover; }
+.sa-map { width: 140px; height: 116px; display: block; margin-left: auto; }
+.replace .sh { margin-top: 64px; margin-bottom: 22px; }
+.replace .hero-btns { margin-bottom: 28px; }
+
 /* === STUDENT RATES === */
 .svc-was { font-size:.8rem; color:var(--dimmer); text-decoration:line-through; margin-bottom:2px; }
 .stu-fine { margin-top:28px; font-size:.85rem; color:var(--muted); text-align:center; max-width:680px; margin-left:auto; margin-right:auto; line-height:1.7; }
@@ -281,7 +317,9 @@ footer .furl { color:var(--cyan); font-weight:500; }
   .nav-links { display:none; }
 }
 @media(max-width:580px){
-  .why-grid,.svc-grid,.ct-grid,.part-grid { grid-template-columns:1fr; }
+  .why-grid,.svc-grid,.ct-grid,.part-grid,.fit-grid { grid-template-columns:1fr; }
+  .fit-wide,.fit-card { grid-template-columns:1fr; }
+  .sa-map { margin: 8px auto 0; }
   nav { padding:14px 18px; }
   .modal { padding:28px 20px 24px; }
   .form-grid { grid-template-columns:1fr; }
@@ -337,6 +375,10 @@ footer .furl { color:var(--cyan); font-weight:500; }
               <option value="Data Recovery">Data Recovery</option>
               <option value="Computer Repair">Computer Repair</option>
               <option value="Parts replacement">Parts — battery, screen, keyboard, fan or charger</option>
+              <option value="Laptop part installation">Laptop part installation</option>
+              <option value="SSD Upgrade">SSD upgrade</option>
+              <option value="SSD Cloning">SSD cloning</option>
+              <option value="RAM Upgrade">RAM upgrade</option>
               <option value="Remote Support">Remote Support</option>
               <option value="On-Site Service">On-Site Service</option>
               <option value="Managed IT & Servers">Managed IT &amp; Servers (M365, SQL)</option>
@@ -658,6 +700,63 @@ footer .furl { color:var(--cyan); font-weight:500; }
       </article>
 
     </div>
+
+    <div class="replace" id="replace">
+      <div class="sh">
+        <h2>Need a laptop part replaced?</h2>
+        <p>A battery, screen, keyboard or internal part. We quote it first, fit it, and get the laptop back to you.</p>
+      </div>
+      <div class="hero-btns">
+        <a href="#contact" class="btn btn-outline">Contact us</a>
+        <button class="btn btn-filled book-trigger">Book a replacement</button>
+      </div>
+
+      <article class="fit-wide">
+        <div>
+          <h3>Laptop part installations</h3>
+          <p>We fit the part in Bloemfontein. A new battery, a screen, or an internal component. Nothing is ordered or installed until you have the quote.</p>
+        </div>
+        <img src="images/install.jpg" alt="Hands fitting a part inside an open laptop" width="640" height="640">
+      </article>
+
+      <div class="fit-grid">
+        <article class="fit-card">
+          <div>
+            <h3>Nationwide replacements</h3>
+            <p>Outside Bloemfontein, send the laptop or ask about collection. We replace the part and return it.</p>
+          </div>
+          <svg class="sa-map" viewBox="0 0 220 180" role="img" aria-label="South Africa. Swift IT is based in Bloemfontein.">
+  <path d="M 12.0 90.1 L 19.2 104.4 L 32.3 127.9 L 34.7 152.1 L 36.5 162.0 L 54.4 168.0 L 80.1 159.6 L 113.0 158.3 L 121.4 157.1 L 148.8 145.3 L 162.0 133.5 L 186.5 106.2 L 202.0 88.3 L 208.0 69.7 L 206.2 51.1 L 197.2 46.1 L 190.7 18.8 L 166.8 12.0 L 150.0 17.6 L 126.1 26.3 L 114.2 41.1 L 80.7 48.6 L 54.4 54.8 L 54.4 68.4 L 30.5 78.3 L 12.0 90.1 Z" fill="#c45c1a"/>
+  <circle cx="35.5" cy="156.7" r="4.2" fill="#00cfe8" stroke="#0b1122" stroke-width="1"/><circle cx="128.6" cy="97.2" r="4.2" fill="#00cfe8" stroke="#0b1122" stroke-width="1"/><circle cx="150.5" cy="61.0" r="4.2" fill="#00cfe8" stroke="#0b1122" stroke-width="1"/><circle cx="186.1" cy="106.4" r="4.2" fill="#00cfe8" stroke="#0b1122" stroke-width="1"/><circle cx="121.4" cy="157.2" r="4.2" fill="#00cfe8" stroke="#0b1122" stroke-width="1"/>
+</svg>
+        </article>
+
+        <article class="fit-card">
+          <div>
+            <h3>SSD upgrade</h3>
+            <p>A solid-state drive for faster startup and file access. We install it and set it up.</p>
+          </div>
+          <img src="images/ssd.jpg" alt="A plain laptop solid-state drive" width="960" height="640">
+        </article>
+
+        <article class="fit-card">
+          <div>
+            <h3>SSD cloning</h3>
+            <p>We copy your current drive onto the new SSD, so your files and programs come across.</p>
+          </div>
+          <img src="images/ssd-m2.jpg" alt="A plain M.2 solid-state drive" width="960" height="640">
+        </article>
+
+        <article class="fit-card">
+          <div>
+            <h3>RAM upgrade</h3>
+            <p>More memory for smoother multitasking. We match the stick to your laptop before it is fitted.</p>
+          </div>
+          <img src="images/ram.jpg" alt="A laptop memory stick" width="960" height="640">
+        </article>
+      </div>
+    </div>
+
     <div class="ct-btns" style="margin-top:32px">
       <button class="btn btn-filled book-trigger">Ask for a part</button>
     </div>
