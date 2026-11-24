@@ -254,6 +254,19 @@ footer .furl { color:var(--cyan); font-weight:500; }
 /* === REQUIRED STAR === */
 .req { color:var(--cyan); margin-left:2px; }
 
+/* === PARTS === */
+.part-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
+.part-card {
+  background:#fff; color:#142033;
+  border-radius:var(--radius); overflow:hidden;
+  border:1px solid var(--border);
+  transition:transform .25s, border-color .25s;
+}
+.part-card:hover { transform:translateY(-4px); border-color:var(--cyan-border); }
+.part-card img { display:block; width:100%; height:190px; object-fit:cover; background:#fff; }
+.part-card h3 { font-size:1.05rem; font-weight:700; padding:14px 16px 2px; color:#142033; }
+.part-card p { font-size:.84rem; color:#4e6285; padding:0 16px 16px; line-height:1.5; }
+
 /* === STUDENT RATES === */
 .svc-was { font-size:.8rem; color:var(--dimmer); text-decoration:line-through; margin-bottom:2px; }
 .stu-fine { margin-top:28px; font-size:.85rem; color:var(--muted); text-align:center; max-width:680px; margin-left:auto; margin-right:auto; line-height:1.7; }
@@ -262,12 +275,13 @@ footer .furl { color:var(--cyan); font-weight:500; }
 @media(max-width:960px){
   .why-grid { grid-template-columns:repeat(2,1fr); }
   .svc-grid { grid-template-columns:repeat(2,1fr); }
+  .part-grid { grid-template-columns:repeat(2,1fr); }
   .ct-grid  { grid-template-columns:repeat(2,1fr); }
   nav { padding:14px 24px; }
   .nav-links { display:none; }
 }
 @media(max-width:580px){
-  .why-grid,.svc-grid,.ct-grid { grid-template-columns:1fr; }
+  .why-grid,.svc-grid,.ct-grid,.part-grid { grid-template-columns:1fr; }
   nav { padding:14px 18px; }
   .modal { padding:28px 20px 24px; }
   .form-grid { grid-template-columns:1fr; }
@@ -322,6 +336,7 @@ footer .furl { color:var(--cyan); font-weight:500; }
               <option value="Student card discount">Student — 15% off other work</option>
               <option value="Data Recovery">Data Recovery</option>
               <option value="Computer Repair">Computer Repair</option>
+              <option value="Parts replacement">Parts — battery, screen, keyboard, fan or charger</option>
               <option value="Remote Support">Remote Support</option>
               <option value="On-Site Service">On-Site Service</option>
               <option value="Managed IT & Servers">Managed IT &amp; Servers (M365, SQL)</option>
@@ -409,6 +424,7 @@ footer .furl { color:var(--cyan); font-weight:500; }
   <ul class="nav-links">
     <li><a href="#why">Why Us</a></li>
     <li><a href="#services">Services</a></li>
+    <li><a href="#parts">Parts</a></li>
     <li><a href="#students">Students</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
@@ -595,8 +611,61 @@ footer .furl { color:var(--cyan); font-weight:500; }
 </section>
 
 
+
+<!-- ── PARTS ── -->
+<section id="parts" class="section section--alt">
+  <div class="wrap">
+    <div class="sh">
+      <h2>Parts we source and replace</h2>
+      <p>Laptop parts fitted in Bloemfontein. We quote the part before anything is ordered or installed.</p>
+    </div>
+    <div class="part-grid">
+
+      <article class="part-card">
+        <img src="images/battery.jpg" alt="Black laptop battery pack" width="960" height="640">
+        <h3>Batteries</h3>
+        <p>Swollen, dead, or short-life laptop batteries.</p>
+      </article>
+
+      <article class="part-card">
+        <img src="images/screen.jpg" alt="Laptop screen panel" width="960" height="640">
+        <h3>Screens</h3>
+        <p>Cracked, flickering, or black laptop displays.</p>
+      </article>
+
+      <article class="part-card">
+        <img src="images/keyboard.jpg" alt="Laptop keyboard" width="960" height="640">
+        <h3>Keyboards</h3>
+        <p>Stuck keys, spills, and worn laptop keyboards.</p>
+      </article>
+
+      <article class="part-card">
+        <img src="images/fan.jpg" alt="Laptop CPU cooling fan" width="960" height="640">
+        <h3>CPU fans</h3>
+        <p>Loud, hot, or failed cooling fans.</p>
+      </article>
+
+      <article class="part-card">
+        <img src="images/chargers.jpg" alt="Laptop chargers and power tips" width="960" height="640">
+        <h3>Chargers</h3>
+        <p>USB-C, barrel, and square-tip laptop chargers.</p>
+      </article>
+
+      <article class="part-card">
+        <img src="images/more-parts.jpg" alt="RAM, SSD and a laptop hinge" width="960" height="640">
+        <h3>And so much more</h3>
+        <p>RAM, SSDs, hinges, ports and other parts we can source.</p>
+      </article>
+
+    </div>
+    <div class="ct-btns" style="margin-top:32px">
+      <button class="btn btn-filled book-trigger">Ask for a part</button>
+    </div>
+  </div>
+</section>
+
 <!-- ── STUDENT RATES ── -->
-<section id="students" class="section section--alt">
+<section id="students" class="section">
   <div class="wrap">
     <div class="sh">
       <h2>Student Rates</h2>
