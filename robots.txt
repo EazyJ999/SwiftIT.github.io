@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://eazyj999.github.io/SwiftIT.github.io/sitemap.xml
